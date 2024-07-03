@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indonesian Tourism</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="../home/index.html">Home</a></li>
+          <li><a href="../kebudayaan/index.html">Kebudayaan</a></li>
+          <li><a href="../tempat_wisata/index.html">Wisata</a></li>
+          <li><a href="../hotel/index.html">Hotel</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Formulir Booking Hotel</h2>
+        <form id="bookingForm">
+          <label for="nama-lengkap">Nama Lengkap:</label>
+          <input
+            type="text"
+            id="nama-lengkap"
+            name="nama-lengkap"
+            required=""
+          /><br /><br />
+
+          <label for="nomor-tanda-pengenal">Nomor Tanda Pengenal:</label>
+          <input
+            type="text"
+            id="nomor-tanda-pengenal"
+            name="nomor-tanda-pengenal"
+            required=""
+          /><br /><br />
+
+          <label for="pilih-hotel">Pilih Hotel:</label>
+          <select id="pilih-hotel" name="pilih-hotel" required="">
+            <option value="">--Pilih Hotel--</option>
+            <option value="Hotel Mulia Senayan, Jakarta">
+              Hotel Mulia Senayan, Jakarta
+            </option>
+            <option value="The Ritz-Carlton Bali">The Ritz-Carlton Bali</option>
+            <option value="Amanjiwo Resort, Yogyakarta">
+              Amanjiwo Resort, Yogyakarta
+            </option>
+            <option value="Hotel Majapahit, Surabaya">
+              Hotel Majapahit, Surabaya
+            </option></select
+          ><br /><br />
+
+          <label for="harga" class="custom-cursor-default-hover">Harga:</label>
+          <input
+            type="text"
+            id="harga"
+            name="harga"
+            disabled=""
+            class="custom-cursor-default-hover"
+          /><br /><br />
+
+          <label for="tanggal-checkin">Tanggal Check-In:</label>
+          <input
+            type="date"
+            id="tanggal-checkin"
+            name="tanggal-checkin"
+            required=""
+          /><br /><br />
+
+          <label for="tanggal-checkout">Tanggal Check-Out:</label>
+          <input
+            type="date"
+            id="tanggal-checkout"
+            name="tanggal-checkout"
+            required=""
+          /><br /><br />
+
+          <button class="button-3" type="button" onclick="submitForm()">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section id="bookingDetails" style="display: none">
+        <div id="print">
+          <h2>Detail Booking</h2>
+          <p id="detail-nama-lengkap"></p>
+          <p id="detail-nomor-tanda-pengenal"></p>
+          <p id="detail-nama-hotel"></p>
+          <p id="detail-harga-hotel"></p>
+          <p id="detail-jumlah-malam"></p>
+          <p id="detail-tanggal-checkin"></p>
+          <p id="detail-tanggal-checkout"></p>
+          <p id="detail-total-harga"></p>
+        </div>
+        <button class="button" onclick="printDetails()">Print</button>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 Indonesian Tourism | Bagus Putra Rahadi</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
